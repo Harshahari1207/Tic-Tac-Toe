@@ -11,6 +11,7 @@
 }
 
 body{
+    background: linear-gradient(to right top, #1b197c, #523790, #7a58a5, #9f7cba, #c2a2d1, #d9afd6, #edbedc, #ffcee3, #ffc9cc, #ffcbaa, #ffd68a, #e3e67c);
     margin: 0;
     display: grid;
     gap: calc(var(--gap)*10);
@@ -18,8 +19,8 @@ body{
     height: 100vh;
     align-items: stretch;
     text-align: center;
-    background-image: linear-gradient(to right top, #1b197c, #523790, #7a58a5, #9f7cba, #c2a2d1, #d9afd6, #edbedc, #ffcee3, #ffc9cc, #ffcbaa, #ffd68a, #e3e67c);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .header{
     display: flex;
@@ -31,20 +32,22 @@ body{
     position: fixed;
 }
 .main{
-    margin-top: 10%;
+   
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    
+    padding: var(--pd);
+    height: 70vh;
+    flex-direction: column;
 }
 .container{
     display: grid;
     width: 60%;
     justify-self: center;
     align-items: center;
-    grid-template-rows: .1fr 2fr;
-    gap: calc(var(--gap)*3);  
+    grid-template-rows: .1fr 1.5fr;
+    gap: calc(var(--gap)*1.5);  
 }
 
 .players{
@@ -60,12 +63,12 @@ body{
     border-radius: var(--br);
 }
 hr{
-    width: 450px;
+    width: 250px;
     border: 3px solid rgb(7, 7, 7);
 }
 .boxes{
-    width: 450px;
-    height: 450px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -73,10 +76,10 @@ hr{
 }
 
 .tile{
-    width: 147px;
-    height: 147px;
+    width: 98px;
+    height: 98px;
     cursor: pointer;
-    font-size: 100px;
+    font-size: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,8 +116,10 @@ footer{
     align-items: center;
     margin-bottom: 0px;
     justify-content: center;
-    align-self: flex-end;
-    margin-top: 10%;
+    
+    /* margin-top: 13%; */
+    bottom: -25%;
+    position: relative;
 }
 
 .announcer{
@@ -136,14 +141,18 @@ footer{
     background-color: #051937;
 }
 
-
-@media only screen and (max-width: 1050px) {
+.empty{
+    margin-top: 140px;
+    
+    width: 100%;
+}
+@media only screen and (min-width: 1050px) {
     body {
       background-color: lightblue;
       gap: calc(var(--gap)*17);
     }
     .main{
-        margin-top: 20%;
+        /* margin-top: 0; */
     }
     .container{
         width: 40%;
@@ -170,23 +179,38 @@ footer{
     .vertical-line{
         border-right: 2px solid black;
     }
+    .empty{
+        
+        margin-top: 170px;
+    }
     button{
         width: 6rem;
         padding: calc(var(--pd)*0.5);
     }
     footer{
-        margin-top: 20%;
+    
+        bottom: -102px;
+        position: relative;
     } 
-  }
+}
 
 
-  @media only screen and (max-width: 650px) {
+@media only screen and (min-width: 400px) {
     .box{
         height: 1.5vh;
         border: 2px solid black;
         padding: var(--pd);
     }
+    .main{
+        margin-top: 0;
+    }
+    hr{
+        width: 200px;
+    }
     footer{
-        margin-top: 40%;
+    
+        bottom: -105px;
+        position: relative;
     } 
-  }
+}
+
