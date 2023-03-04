@@ -142,7 +142,7 @@ footer{
     z-index: 99;
 }
 
-@media only screen and (min-width: 1050px) {
+/* @media only screen and (min-width: 1050px) {
     
     .container{
         width: 40%;
@@ -153,11 +153,11 @@ footer{
     }
     
     button{
-        width: 6rem;
-        padding: calc(var(--pd)*0.5);
+        width: 8rem;
+        padding: calc(var(--pd)*1.5);
     }
     
-}
+} */
 
 
 @media only screen and (max-width: 400px) {

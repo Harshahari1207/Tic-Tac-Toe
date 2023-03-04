@@ -31,9 +31,11 @@ for(let i=0; i<3; i++){
         tile.id = i.toString() + "-" + j.toString();
         tile.classList.add("tile");
         if(i === 0 || i === 1){
+            console.log("Hello");
             tile.classList.add("horizontal-line");
         }
         if(j === 0 || j === 1){
+            
             tile.classList.add("vertical-line");
         }
         tile.addEventListener("click", setTile);
