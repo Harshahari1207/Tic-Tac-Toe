@@ -143,26 +143,15 @@ footer{
 }
 
 @media only screen and (min-width: 1050px) {
-    body {
-      background-color: lightblue;
-      ;
-    }
     
     .container{
         width: 40%;
     }
-    hr{
-        width: 300px;
-        border: 2px solid black;
-    }
 
-    .horizontal-line{
+    .horizontal-line, .vertical-line{
         border-bottom: 2px solid black;
     }
     
-    .vertical-line{
-        border-right: 2px solid black;
-    }
     button{
         width: 6rem;
         padding: calc(var(--pd)*0.5);
@@ -171,15 +160,17 @@ footer{
 }
 
 
-@media only screen and (min-width: 400px) {
-    .box{
-        height: 1.5vh;
-        border: 2px solid black;
-        padding: var(--pd);
+@media only screen and (max-width: 400px) {
+    .boxes{
+        width: 150px;
+        height: 150px;
     }
-    
+    .tile{
+        width: 48px;
+        height: 48px;
+    }
     hr{
-        width: 200px;
+        width: 150px;
     }
     
 }
