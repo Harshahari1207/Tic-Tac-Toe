@@ -14,13 +14,12 @@ body{
     background: linear-gradient(to right top, #1b197c, #523790, #7a58a5, #9f7cba, #c2a2d1, #d9afd6, #edbedc, #ffcee3, #ffc9cc, #ffcbaa, #ffd68a, #e3e67c);
     margin: 0;
     display: grid;
-    gap: calc(var(--gap)*10);
     width: 100%;
     height: 100vh;
-    align-items: stretch;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
+    grid-template-rows: .7fr 5fr .7fr;
 }
 .header{
     display: flex;
@@ -29,16 +28,16 @@ body{
     background-color: var(--primary_color);
     color: var(--secondary_color);
     cursor: pointer;
-    position: fixed;
+    position: relative;
+    grid-row: 1/2;
 }
 .main{
-   
+    grid-row: 2/3;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
     padding: var(--pd);
-    height: 70vh;
     flex-direction: column;
 }
 .container{
@@ -114,12 +113,8 @@ footer{
     color: var(--primary_color);
     display: flex;
     align-items: center;
-    margin-bottom: 0px;
     justify-content: center;
-    
-    /* margin-top: 13%; */
-    bottom: -25%;
-    position: relative;
+    grid-row: 3/4;
 }
 
 .announcer{
@@ -135,25 +130,24 @@ footer{
 }
 
 .result{
+    background-color: rgba(234, 114, 114, 0.2);
+    backdrop-filter: blur(5px);
+    display: none;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
-    display: none;
-    background-color: #051937;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
 }
 
-.empty{
-    margin-top: 140px;
-    
-    width: 100%;
-}
 @media only screen and (min-width: 1050px) {
     body {
       background-color: lightblue;
-      gap: calc(var(--gap)*17);
+      ;
     }
-    .main{
-        /* margin-top: 0; */
-    }
+    
     .container{
         width: 40%;
     }
@@ -161,17 +155,7 @@ footer{
         width: 300px;
         border: 2px solid black;
     }
-    .boxes{
-        width: 300px;
-        height: 300px;
-    }
-    
-    .tile{
-        width: 98px;
-        height: 98px;
-        font-size: 50px;
-    }
-    
+
     .horizontal-line{
         border-bottom: 2px solid black;
     }
@@ -179,19 +163,11 @@ footer{
     .vertical-line{
         border-right: 2px solid black;
     }
-    .empty{
-        
-        margin-top: 170px;
-    }
     button{
         width: 6rem;
         padding: calc(var(--pd)*0.5);
     }
-    footer{
     
-        bottom: -102px;
-        position: relative;
-    } 
 }
 
 
@@ -201,16 +177,10 @@ footer{
         border: 2px solid black;
         padding: var(--pd);
     }
-    .main{
-        margin-top: 0;
-    }
+    
     hr{
         width: 200px;
     }
-    footer{
     
-        bottom: -105px;
-        position: relative;
-    } 
 }
 
