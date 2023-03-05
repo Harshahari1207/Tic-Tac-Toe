@@ -141,6 +141,14 @@ footer{
     position: absolute;
     z-index: 99;
 }
+.resultDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--gap)*4);
+}
 
 /* @media only screen and (min-width: 1050px) {
     
@@ -160,7 +168,7 @@ footer{
 } */
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .boxes{
         width: 150px;
         height: 150px;
@@ -172,6 +180,8 @@ footer{
     hr{
         width: 150px;
     }
-    
+    .resultDiv .display{
+        font-size: 25px;
+    }
 }
 
