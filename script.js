@@ -23,7 +23,7 @@ function setGame(){
     ['', '', ''],
     ['', '', ''],
     ['', '', '']
-]
+    ]
 
 for(let i=0; i<3; i++){
     for(let j=0; j<3; j++){
@@ -46,6 +46,16 @@ for(let i=0; i<3; i++){
 }
 }
 
+function isEmpty(){
+    for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board[i].length; j++) {
+          if (board[i][j] === '') {
+            return false; // found an empty or non-string element
+          }
+        }
+      }
+    return true;
+}
 
 function setTile(){
     if(gameOver)
@@ -73,6 +83,13 @@ function setTile(){
 
 
     checkWinner();
+    let empty = isEmpty();
+    if(empty === true){
+        result.style.display = 'flex';
+        announcer.innerText = 'Game Draw Try Again';
+    }
+    
+
 }
 
 function checkWinner(){
