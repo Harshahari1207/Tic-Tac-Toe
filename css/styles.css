@@ -150,22 +150,6 @@ footer{
     gap: calc(var(--gap)*4);
 }
 
-/* @media only screen and (min-width: 1050px) {
-    
-    .container{
-        width: 40%;
-    }
-
-    .horizontal-line, .vertical-line{
-        border-bottom: 2px solid black;
-    }
-    
-    button{
-        width: 8rem;
-        padding: calc(var(--pd)*1.5);
-    }
-    
-} */
 
 
 @media only screen and (max-width: 450px) {
