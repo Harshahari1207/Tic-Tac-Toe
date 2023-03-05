@@ -84,7 +84,7 @@ function setTile(){
 
     checkWinner();
     let empty = isEmpty();
-    if(empty === true){
+    if(empty === true && announcer.innerHTML === ''){
         result.style.display = 'flex';
         announcer.innerText = 'Game Draw Try Again';
     }
