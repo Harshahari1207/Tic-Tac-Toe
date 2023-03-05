@@ -172,10 +172,12 @@ footer{
     .boxes{
         width: 150px;
         height: 150px;
+        
     }
     .tile{
         width: 48px;
         height: 48px;
+        font-size: 30px;
     }
     hr{
         width: 150px;
